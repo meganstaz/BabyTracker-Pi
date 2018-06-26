@@ -179,6 +179,15 @@
                             on_press: root.get_the_time(indicator=self.text, target=feedtime, pickle_file_name='feed_time.pkl')
                             on_press: root.tally_count(pickle_file_name = "feedings.pkl")
                             on_press: app.update_widget_time(k='feedtime')
+                            
+                        Button:
+                            text: "Snack"
+                            font_size: 20
+                            on_release: root.post_data_on_open(entry_content=self.text)
+                            on_press: root.get_the_time(indicator=self.text, target=feedtime, pickle_file_name='feed_time.pkl')
+                            on_press: root.tally_count(pickle_file_name = "feedings.pkl")
+                            on_press: app.update_widget_time(k='feedtime')
+
 
                     GridLayout:
                         cols: 1
